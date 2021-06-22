@@ -1,0 +1,15 @@
+.header-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+.headerLogoText {
+    font-size: 18px;
+    line-height: 32px;
+    align-items: center;
+}
+.headerImg {
+    align-items: center;
+    margin: 0 auto;
+}
