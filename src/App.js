@@ -1,25 +1,62 @@
 import logo from './logo.svg';
 import './App.css';
+import * as yup from 'yup'
 import {Route} from 'react-router-dom'
 import Login  from './Login'
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
+import schema from './formSchema'
+import axios from 'axios'
 
 const loginValues ={
   username: '',
   password:''
   }
   
+
+  const initialErrors ={
+    name:'',
+    password:'',
+  }
   const initialDisabled = true
 
 function App() {
+  const [users, setUsers] = useState([])
  const [signIn, setSignIn] = useState(loginValues) 
  const [disabled, setDisabled] = useState(initialDisabled)
+ const [formErrors, setFormErrors] = useState(initialErrors)
+ 
  const updateInput = (name, value) =>{
+  validate(name,value)
    setSignIn({
      ...signIn,[name]: value
    })
+}
 
- }
+useEffect(() => {
+  schema.isValid(signIn).then(valid=> {
+   setDisabled(!(valid))
+  })
+ }, [signIn])
+
+const validate = (name, value) => {
+  yup.reach(schema, name)
+  .validate(value)
+  .then(()=> setFormErrors({ ...formErrors, [name]: ''}))
+  .catch(err =>{
+    console.log(err.message)
+    console.log(formErrors)
+    setFormErrors( {...formErrors,[name]: err.message})
+  })
+}
+
+const postUser = () => { //place holder for sign in submission.   
+  const newUser = {...signIn}
+ axios.post('http://localhost:3000/', newUser)
+ .then(res =>{
+   console.log(res.data)
+   setUsers([res.data, ...users])
+ })
+}
   return (
     <div className="log-in">
       <header className="header">
@@ -28,9 +65,12 @@ function App() {
         <Login
         update = {updateInput}
         values = {signIn}
+        disabled ={disabled} 
+        submit= {postUser}
+        errors= {formErrors}
         />
         <p>
-         Dont have an account?
+         Don't have an account?
         </p>
         <a
           className="App-link"

@@ -6,6 +6,9 @@ import react from 'react'
     const {
          values,
          update,
+         errors,
+         submit,
+         disabled
      } = props
 
      const onChange =event =>{
@@ -13,8 +16,15 @@ import react from 'react'
        update( name,value)
      }
 
+     const onSubmit = evt => {
+        evt.preventDefault()
+        submit()
+      }
+
 return (
 <div className = 'login'>
+    <div>{errors.username}</div>
+    <div>{errors.password}</div>
      <label>Username
          <input
          value = {values.username}
@@ -31,7 +41,7 @@ return (
          onChange= {onChange}
          />
      </label>
-     <button className = 'sub-btn '>Submit</button>
+     <button onClick = {onSubmit} disabled = {disabled}>Sign In</button>
  </div>
     )
  }
