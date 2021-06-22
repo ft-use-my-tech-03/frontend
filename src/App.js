@@ -18,6 +18,7 @@ const loginValues ={
     password:'',
   }
   const initialDisabled = true
+import React from 'react';
 
 function App() {
   const [users, setUsers] = useState([])
@@ -82,6 +83,17 @@ const postUser = () => { //place holder for sign in submission.
         </a>
       </header>
     </div>
+  );
+  
+}
+
+function App() {
+  return (
+    <Router>
+      <Switch>
+        <Route path="/register" component={Register}/>
+      </Switch>
+    </Router>
   );
 }
 
