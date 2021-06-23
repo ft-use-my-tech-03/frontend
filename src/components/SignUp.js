@@ -47,7 +47,7 @@ function SignUp({addUser}) {
     const handleSignUp = (e) => {
         e.preventDefault();
         addUser(signUpValues)
-        push('/techform')
+        push('/')
     }
 
     return (

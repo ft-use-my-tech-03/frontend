@@ -56,7 +56,7 @@ function Login({isLoggedIn, logIn}) {
     const handleLogIn = (e) => {
         e.preventDefault();
         logIn(form)
-        push('/techform')
+        push('/dashboard')
     }
 
     return (
