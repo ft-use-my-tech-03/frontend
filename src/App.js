@@ -5,6 +5,7 @@ import Register from './components/Register';
 import Home from './components/Home'
 import Header from './layout/Header'
 import NavBar from './components/NavBar';
+import Login from './components/Login';
 
 
 function RegisterUser() {
@@ -14,6 +15,7 @@ function RegisterUser() {
       <Header />
       <Switch>
         <Route path="/register" component={Register}/>
+        <Route path="/login" component={Login} />
         <Route path="/" exact component={Home} />
       </Switch>
     </Router>
