@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import logo from './logo.svg';
 import './App.css';
 import * as yup from 'yup'
@@ -18,8 +20,27 @@ const loginValues ={
     password:'',
   }
   const initialDisabled = true
+>>>>>>> main
 import React from 'react';
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 
+<<<<<<< HEAD
+import Register from './components/Register';
+import Home from './Home'
+import Header from './layout/Header'
+
+
+
+function RegisterUser() {
+  return (
+    <Router>
+      <Header />
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/register" component={Register}/>
+      </Switch>
+    </Router>
+=======
 function App() {
   const [users, setUsers] = useState([])
  const [signIn, setSignIn] = useState(loginValues) 
@@ -83,6 +104,7 @@ const postUser = () => { //place holder for sign in submission.
         </a>
       </header>
     </div>
+>>>>>>> main
   );
   
 }
@@ -97,4 +119,4 @@ function App() {
   );
 }
 
-export default App;
+export default RegisterUser;

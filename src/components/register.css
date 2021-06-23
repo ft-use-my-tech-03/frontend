@@ -1,0 +1,48 @@
+.register_section {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+.formAll {
+    display: block;
+    margin: 0 auto;
+}
+
+
+.registerAll {
+    font-size: .8rem;
+    line-height: 18px;
+    padding: 10px 20px;
+    display: block;
+    margin: 0 auto;
+}
+
+.loginButton {
+    text-decoration: none;
+    border: 1px solid #000;
+    padding: 5px 10px;   
+    font-size: .4rem;
+    color: #000;   
+}
+
+.loginButton:hover {
+    background-color: #000; 
+    border: 1px solid #fff;
+    color: #fff;   
+}
+
+.registerButton {
+    text-decoration: none;
+    padding: 5px 10px;    
+    font-size: .4rem;  
+    color: #fff; 
+    background-color: #000; 
+    border: 1px solid #000;
+    margin: 5px;
+}
+
+.registerButton:hover {
+    font-size: .4rem;  
+    color: #000; 
+    background-color: #fff; 
+}
