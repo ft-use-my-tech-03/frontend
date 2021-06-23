@@ -1,7 +1,6 @@
 import React from 'react'
 import { useFormik } from 'formik'
 import axios from 'axios'
-import "./register.css"
 import { Link } from 'react-router-dom'
 
 const validate = values => {

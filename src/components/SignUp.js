@@ -51,8 +51,8 @@ function SignUp({addUser}) {
     }
 
     return (
-        <div>
-            <div>
+        <div className="container">
+            <div className="sbox">
                 <h1>Create an account</h1>
                 <div className="errors">
                                 <div>{errorValues.username}</div>

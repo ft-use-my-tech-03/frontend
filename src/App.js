@@ -9,10 +9,12 @@ import Login from './components/Login';
 import SignUp from './components/SignUp';
 import TechForm from './components/TechForm';
 import PrivateRoute from './components/PrivateRoute';
+import './App.css'
 
 function App() {
   return (
-    <Router>
+    <div className="wrapper">
+      <Router>
       <NavBar />
       {/* <Header /> */}
       <Switch>
@@ -23,6 +25,8 @@ function App() {
         <Route path="/" exact component={Home} />
       </Switch>
     </Router>
+    </div>
+    
   );
 }
 
