@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { useHistory } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { logIn } from '../store';
+import schema from '../validation/formSchema';
+import * as yup from 'yup';
 
 
 
@@ -26,11 +28,25 @@ function Login({isLoggedIn, logIn}) {
 
     const { push } = useHistory();
 
-    const inputChange = () => {
+    const inputChange = (name, value) => {
+
+        yup.reach(schema, name)
+            .validate(value)
+            .then(() => {
+                setFormError({ ...formError, [name]: '' })
+            })
+            .catch((err) => {
+                setFormError({ ...formError, [name]: err.errors[0] })
+            })
+
+
+        setForm({ ...form, [name]: value })
     }
 
     useEffect(() => {
-    })
+        schema.isValid(form)
+            .then(valid => setDisabled(!valid))
+    }, [form])
 
     const onChange = (event) => {
         const { name, value } = event.target;
@@ -40,7 +56,7 @@ function Login({isLoggedIn, logIn}) {
     const handleLogIn = (e) => {
         e.preventDefault();
         logIn(form)
-        push('/dashboard')
+        push('/techform')
     }
 
     return (
