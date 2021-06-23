@@ -4,12 +4,22 @@
     justify-content: space-between;
     padding: 10px 20px;
 }
+
 .headerLogoText {
     font-size: 18px;
     line-height: 32px;
     align-items: center;
 }
-.headerImg {
+
+.wrapper {
+    width: auto;
+    height: 100vh;
+    background-image: url('https://www.odysseyis.com/wp-content/uploads/2019/05/46598089_m-2-e1558647186168.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: opacity(80%);
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    margin: 0 auto;
-}
+  }
