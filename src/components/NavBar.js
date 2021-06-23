@@ -14,19 +14,61 @@ function NavBar({isLoggedIn, logOut}) {
     }
     
     return (
-        <div>
-            <nav>
-                <Link to="/">Home</Link>
-                { !isLoggedIn && 
-                    <Link to="/login">Login</Link>}
-                {isLoggedIn ? 
-                    <Link onClick={handleLogOut}>Log Out</Link>
-                    :
-                    <Link to="/signup">Sign Up</Link>}
-                { isLoggedIn && 
-                    <Link to="/dashboard">Dashboard</Link>}
-            </nav>
+        <div className="wrapper">
+            <div className="container">
+            <div className="nav">
+            <div className="logo">LensRentals</div>
+            <div className="menu">
+                <ul className="navMenu">
+                    <nav>
+                        <Link to="/">
+                            <li>
+                                <a href="#0">
+                                    Home
+                                </a>
+                            </li>
+                        </Link>
+                        { !isLoggedIn && 
+                        <Link to="/login">
+                            <li>
+                                <a href="#0">
+                                    Login
+                                </a>
+                            </li>
+                        </Link>}
+                        {isLoggedIn ? 
+                        <Link onClick={handleLogOut}>
+                            <li>
+                                <a href="#0">
+                                    Log Out
+                                </a>
+                            </li>
+                        </Link>
+                            :
+                        <Link to="/signup">
+                            <li>
+                                <a href="#0">
+                                    Sign Up
+                                </a>
+                            </li>
+                        </Link>}
+                        { isLoggedIn && 
+                        <Link to="/dashboard">
+                            <li>
+                                <a href="#0">
+                                    Dashboard
+                                </a>
+                            </li>
+                            
+                        </Link>}
+                    </nav>
+                </ul>
+            </div>
         </div>
+        </div>
+        
+        </div>
+        
     )
 }
 

@@ -45,24 +45,10 @@
   background-size: cover;
   background-repeat: no-repeat;
   backdrop-filter: opacity(80%);
-  display: flex;
-  flex-direction: column;
+  display: block;
 }
 
-/* .header-section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 20px;
-}
-
-.headerLogoText {
-  font-size: 18px;
-  line-height: 32px;
-  align-items: center;
-} */
-
-.container {
+.hbox {
   color: white;
 	width: 300px;
 	padding: 40px;
@@ -73,22 +59,129 @@
 	background: #042C71;
 	text-align: center;
 	border-radius: 24px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+}
+
+/* .container {
+  width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+} */
+
+.sbox {
+  color: white;
+	width: 300px;
+	padding: 40px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #042C71;
+	text-align: center;
+	border-radius: 24px;
+}
+.sbox h1 {
+	color: white;
+	font-weight: 700;
+	margin-bottom: 20px;
 }
 
 .sbox input {
 	border: 0;
 	color: white;
-	display: block;
+	display: flex;
 	margin: 10px auto;
 	text-align: center;
-	border: 2px solid #3498db;
+	border: 2px solid white;
 	padding: 14px 10px;
 	width: 200px;
 	outline: none;
 	background: none;
 	border-radius: 24px;
 	transition: 0.25s;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sbox input:focus {
+	width: 220px;
+	border-color: #3498db;
+}
+
+.sbox button {
+	border: 0;
+	background: none;
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+	border: 2px solid #3498db;
+	padding: 14px 40px;
+	outline: none;
+	color: white;
+	border-radius: 24px;
+	transition: 0.25s;
+	cursor: pointer;
+	font-size: 1.2rem;
+}
+
+.sbox button:hover {
+	background: #3498db;
+}
+
+.nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 80px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.521);
+	display: flex;
+	align-items: center;
+	padding: 0 50px;
+  background-color: #042C71;
+}
+
+.logo {
+	font-family: sans-serif;
+	font-size: 2.5rem;
+	font-weight: 600;
+	letter-spacing: 0.7rem;
+	color: white;
+	margin: 4%;
+}
+.menu {
+	display: inline-block;
+	line-height: 80px;
+}
+.navmenu {
+	width: 100%;
+}
+.menu ul {
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.menu ul li {
+	display: inline-block;
+}
+.menu ul li a {
+	text-decoration: none;
+	font-family: sans-serif;
+	font-size: 1.2rem;
+	font-weight: 600;
+	height: 20px;
+	color: white;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	padding: 10px 15px;
+	margin: 0 5px;
+	transition: 0.5s ease;
+}
+.menu ul li a:hover {
+	color: white;
+	border: 1px solid #3498db;
 }
