@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import computer from '../images/computer.jpg';
 
 
 
@@ -9,7 +10,7 @@ function Tech(props) {
 
     return (
         <section>
-            { tech_image ? <img src={tech_image} /> : <img src={} />}
+            { tech_image ? <img src={tech_image} /> : <img src={computer} />}
             <h3>Type: {tech_type}</h3>
             <h3>Start Time: {start_day}</h3>
             <Link to={`/class/${tech_id}`}>

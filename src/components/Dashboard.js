@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import { getTech} from "../store";
+import { getTech } from "../store";
 import Tech from "./Tech";
 
 function Dashboard(props) {

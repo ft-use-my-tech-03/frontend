@@ -64,6 +64,20 @@ export const addTech = (newTech) => (dispatch) => {
     .catch((err) => console.log(err));
 };
 
+export const getTech = () => {
+  return (dispatch) => {
+    dispatch({ type: GET_TECH_START });
+    return axiosWithAuth()
+      .get(`tech`)
+      .then((res) => {
+        dispatch({ type: GET_TECH_SUCCESS, payload: res.data });
+      })
+      .catch((err) => {
+        dispatch({ type: GET_TECH_FAILURE, payload: err.message });
+      });
+  };
+};
+
 export const getTechInfo = (id) => (dispatch) => {
   dispatch({ type: GET_TECH_START });
   return axiosWithAuth()
