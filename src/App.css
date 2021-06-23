@@ -36,3 +36,59 @@
     transform: rotate(360deg);
   }
 }
+
+.wrapper {
+  width: auto;
+  height: 100vh;
+  background-image: url('https://www.odysseyis.com/wp-content/uploads/2019/05/46598089_m-2-e1558647186168.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  backdrop-filter: opacity(80%);
+  display: flex;
+  flex-direction: column;
+}
+
+/* .header-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.headerLogoText {
+  font-size: 18px;
+  line-height: 32px;
+  align-items: center;
+} */
+
+.container {
+  color: white;
+	width: 300px;
+	padding: 40px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #042C71;
+	text-align: center;
+	border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sbox input {
+	border: 0;
+	color: white;
+	display: block;
+	margin: 10px auto;
+	text-align: center;
+	border: 2px solid #3498db;
+	padding: 14px 10px;
+	width: 200px;
+	outline: none;
+	background: none;
+	border-radius: 24px;
+	transition: 0.25s;
+}
