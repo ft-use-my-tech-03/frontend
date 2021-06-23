@@ -136,7 +136,7 @@ const RegisterUser = () => {
 
                 <label htmlFor="userType">User Type</label><br></br>
                 <select value={formik.values.userType} onChange={formik.handleChange} name="userType">
-                    <option value="">Select the User type</option>
+                    <option value="">Select your Role</option>
                     <option value="owner">Owner</option>
                     <option value="renter">Renter</option>
                 </select><br></br>
