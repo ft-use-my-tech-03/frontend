@@ -45,6 +45,11 @@ const validate = values => {
         errors.confirmPassword = "Password must be matched"
     }
 
+    // User Type Validation
+    if(!values.userType) {
+        errors.userType = 'Required'
+    }
+
     return errors
 }
 
@@ -56,7 +61,8 @@ const RegisterUser = () => {
             lastName: '',
             email: '',
             password: '',
-            confirmPassword: ''
+            confirmPassword: '',
+            userType: ''
         },
         
         validate,
@@ -127,6 +133,14 @@ const RegisterUser = () => {
                     onChange={formik.handleChange}
                     value={formik.values.confirmPassword}
                 /><br></br>
+
+                <label htmlFor="userType">User Type</label><br></br>
+                <select value={formik.values.userType} onChange={formik.handleChange} name="userType">
+                    <option value="">Select the User type</option>
+                    <option value="owner">Owner</option>
+                    <option value="renter">Renter</option>
+                </select><br></br>
+                {formik.errors.userType ? <div style={{color: 'red'}}>{formik.errors.userType}</div> : null}
 
                 <button type="submit">Register</button>                
             </form>
