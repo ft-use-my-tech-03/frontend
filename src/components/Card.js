@@ -5,14 +5,15 @@ const Card = (item) => {
     return (
         <div className="card-section">
             <div className="image-sec">
-                image section
+                <img src={item.item.image_url} alt="..." style={{width: "200px"}}/>
             </div>
             <div className="body">
-                <h3>{item.item.title}</h3>
-                <p>{item.item.description}</p>
+                <h3>{item.item.item_name}</h3>
+                <p>{item.item.item_category}</p>
+                <p>{item.item.item_description}</p>
                 <div>
-                    <p>Available for {item.item.timeline}</p>
-                    <button style={{marginLeft: 0}}>${item.item.fee} Rental Cost</button>
+                    <p>Quantity Available {item.item.item_quantity}</p>
+                    <button style={{marginLeft: 0}}>${item.item.price} Rental Cost</button>
                 </div>
             </div>
         </div>

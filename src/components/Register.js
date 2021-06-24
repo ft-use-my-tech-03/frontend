@@ -30,6 +30,11 @@ const validate = values => {
     } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
         errors.email = 'Invalid email address'
     }
+    // Address Validation
+    // City Validation
+    // State Validation
+    // ZipCode Validation
+
     // Password Validation
     if(!values.password) {
         errors.password = 'Required'
@@ -61,15 +66,32 @@ const RegisterUser = () => {
             email: '',
             password: '',
             confirmPassword: '',
-            userType: ''
+            userType: '',
+            address: '',
+            city: '',
+            state: '',
+            zipcode: ''
         },
         
         validate,
-        onSubmit: values => {
-            console.log(JSON.stringify(values.firstName, values.lastName, values.email, values.password))
+        onSubmit: values => {            
             // we will send the user data to the register api here
-            const baseURI = '';
-            axios({method: "post", url: baseURI, data: values}).then((response) => console.log("response data from the API", response))
+            let owner = values.userType === "owner" ? true : false;
+            const baseURI = 'https://usemytechstuff3.herokuapp.com/api/auth/register';
+            let user = {
+                user_username: values.firstName + " " + values.lastName,
+                user_password: values.password,
+                user_email: values.email,
+                user_firstname: values.firstName,
+                user_lastname: values.lastName,
+                owner: owner,
+                user_address: values.address,
+                user_city: values.city,
+                user_state: values.state,
+                user_zipcode: values.zipcode
+            }
+            console.log("axios request data", user, baseURI)
+            axios({method: "post", url: baseURI, data: user}).then((response) => console.log("response data from the API", response))
         }
     })    
 
@@ -111,6 +133,46 @@ const RegisterUser = () => {
 
                 /><br></br>
                 {formik.errors.email?<div style={{color: 'red'}}>{formik.errors.email}</div>:null}
+
+                <label htmlFor="address">Address:</label><br></br>
+                <input 
+                    id="address"
+                    name="address"
+                    type="text"
+                    placeholder="Address"
+                    onChange={formik.handleChange}
+                    value={formik.values.address}
+                /><br></br>
+
+                <label htmlFor="city">City</label><br></br>
+                <input 
+                    id="city"
+                    name="city"
+                    type="text"
+                    placeholder="City"
+                    onChange={formik.handleChange}
+                    value={formik.values.city}
+                /><br></br>
+
+                <label htmlFor="state">State</label><br></br>
+                <input 
+                    id="state"
+                    name="state"
+                    type="text"
+                    placeholder="State"
+                    onChange={formik.handleChange}
+                    value={formik.values.state}
+                /><br></br>
+
+                <label htmlFor="zipcode">ZipCode</label><br></br>
+                <input
+                    id="zipcode"
+                    name="zipcode"
+                    type="text"
+                    placeholder="ZipCode"
+                    onChange={formik.handleChange}
+                    value={formik.values.zipcode}
+                /><br></br>
 
                 <label htmlFor="password">Password:</label><br></br>
                 <input 

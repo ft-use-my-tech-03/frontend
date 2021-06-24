@@ -1,4 +1,5 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
+import axios from 'axios'
 import "./card.css"
 import Card from './Card'
 import { Link } from 'react-router-dom'
@@ -25,6 +26,22 @@ const dummyData = [
 ]
 
 const Products = () => {
+    const [products, setProducts] = useState([])
+    useEffect(() => {
+        let endpoint = 'https://usemytechstuff3.herokuapp.com/api/products'
+        axios({
+            url: endpoint,
+            method: 'get'
+        }).then((res) => {
+            console.log(res.data)
+            setProducts(res.data)
+        })
+    }, [])
+
+    const handleCategory = (item) => {
+        console.log(item.item_category + "clicked!")
+    }
+
     return (        
         <div className="homepage-section">
         <div className="home-header-section">
@@ -34,13 +51,17 @@ const Products = () => {
                     <h2 classname="productsHeader2">
                         Camera and Equipment Rentals
                      </h2>               
-                    <div> 
-                       <h2 class="categoryLinks">Camera</h2> <h2 class="categoryLinks">Lenses</h2> <h2 class="categoryLinks">Drones</h2> <h2 class="categoryLinks">Lights</h2> 
+                    <div className="rentals"> 
+                      {
+                          products.map((item, index) => (
+                              <h2  onClick={handleCategory(item)} key={index}>{item.item_category}</h2>
+                          ))
+                      }
                     </div> 
                 </div>
                 <div className="list-section">
                     {
-                        dummyData.map((item) => (
+                        products.map((item) => (
                             <Card item = {item}/>
                         ))
                     }
