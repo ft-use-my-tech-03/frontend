@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
-
+import Details from './components/Details'
 import Register from './components/Register';
 import Home from './components/Home';
 import Header from './layout/Header';
@@ -26,6 +26,7 @@ function App() {
       <PrivateRoute path="/techform" component={TechForm} />
         <Route path="/register" component={Register}/>
         <Route path="/signup" component={SignUp} />
+        <Route path="/details/:id" component={Details} />
         <Route path="/login" component={Login} />
         <Route path="/" exact component={Home} />
         <Route path="/products" component={Products}/>
