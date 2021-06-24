@@ -72,3 +72,8 @@ function EditTech(props) {
 }
 
 export default connect(null, {editTech})(EditTech);
+
+
+
+
+
