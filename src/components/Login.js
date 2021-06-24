@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { logIn } from '../store';
 import schema from '../validation/formSchema';
 import * as yup from 'yup';
-
+import axios from 'axios'
 
 
 function Login({isLoggedIn, logIn}) {
@@ -55,8 +55,16 @@ function Login({isLoggedIn, logIn}) {
 
     const handleLogIn = (e) => {
         e.preventDefault();
-        logIn(form)
-        push('/techform')
+        axios.post('http://localhost:3000/login', form)
+        .then(res => {
+            console.log(res.data)
+            localStorage.setItem('token', res.data.token);
+            logIn(res.data.data.user_id);
+            push('/');
+        })
+        .catch(err => {
+            console.log(err);
+        })
     }
 
     return (

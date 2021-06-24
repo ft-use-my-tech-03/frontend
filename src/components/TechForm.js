@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { addTech } from "../store/actions";
 import { connect } from "react-redux";
 import { useHistory } from "react-router-dom";
+import styled from "styled-components";
 
 const initialValues = {
   tech_image: "",
@@ -10,7 +11,7 @@ const initialValues = {
   start_date: "",
 };
 
-function ClassForm(props) {
+function TechForm(props) {
   const [values, setValues] = useState(initialValues);
   const history = useHistory();
 
@@ -24,15 +25,15 @@ function ClassForm(props) {
 
     const newTech = { ...values };
     console.log(newTech);
-    props.addClasses(newTech);
+    props.addTech(newTech);
     setTimeout(() => {
       history.push("/dashboard");
     }, 3000);
   };
 
   return (
-    <div>
-      <h1>Tech Form</h1>
+    <MainDiv>
+      <H1>Tech Form</H1>
       {/* <div className="errors">
                             <div>{errorValues.username}</div>
                             <div>{errorValues.password}</div>
@@ -46,45 +47,45 @@ function ClassForm(props) {
                         name = 'name'
                     />
                 </label> */}
-        <label>
+        <Label>
           Type:
-          <input
+          <Input
             type="text"
             value={values.tech_type}
             onChange={onChange}
             name="tech_type"
           />
-        </label>
-        <label>
+        </Label>
+        <Label>
           Image:
-          <input
+          <Input
             type="text"
             value={values.tech_image}
             onChange={onChange}
             name="tech_image"
           />
-        </label>
-        <label>
+        </Label>
+        <Label>
           Duration:
-          <input
+          <Input
             type="text"
             value={values.day_duration}
             onChange={onChange}
             name="day_duration"
           />
-        </label>
-        <label>
+        </Label>
+        <Label>
           Start Date:
-          <input
+          <Input
             type="text"
             value={values.start_date}
             onChange={onChange}
             name="start_date"
           />
-        </label>
-        <button>Add Class</button>
+        </Label>
+        <Button>Add Equipment</Button>
       </form>
-    </div>
+    </MainDiv>
   );
 }
 
@@ -95,4 +96,49 @@ const mapStatesToProps = (state) => {
   };
 };
 
-export default connect(mapStatesToProps, { addTech })(ClassForm);
+export default connect(mapStatesToProps, { addTech })(TechForm);
+
+const MainDiv = styled.div`
+background-image: url('https://www.odysseyis.com/wp-content/uploads/2019/05/46598089_m-2-e1558647186168.jpg');
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+`
+const H1 = styled.h1`
+color: #042C71;
+font-family: sans-serif;
+	font-size: 3em;
+	font-weight: 600;
+`
+
+const Label = styled.label`
+font-family: sans-serif;
+	font-size: 1.2rem;
+	font-weight: 600;
+color: #042C71;
+`
+
+const Input = styled.input`
+width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+`
+
+const Button = styled.button`
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+cursor: pointer;
+width: 100%;
+color: #042C71;
+&: hover {
+    opacity: 0.8;   
+}
+`
