@@ -25,7 +25,7 @@ export const LOG_OUT_SUCCESS = "LOG_OUT_SUCCESS";
 // authentication actions
 export const addUser = (newUser) => (dispatch) => {
   axios
-    .post('', newUser)
+    .post('http://localhost:3000/signup', newUser)
     .then(res => {
       dispatch({type:SIGN_UP_SUCCESS, payload: res.data[0]})
     })
@@ -36,7 +36,7 @@ export const addUser = (newUser) => (dispatch) => {
 
 export const logIn = (newUser) => (dispatch) => {
   axios
-    .post('', newUser)
+    .post('http://localhost:3000/login', newUser)
     .then(res => {
       dispatch({type: LOG_IN_SUCCESS, payload: res.data.data})
       window.localStorage.setItem('token', res.data.token)
