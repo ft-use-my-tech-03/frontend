@@ -25,7 +25,7 @@ function ClassForm(props) {
 
     const newTech = { ...values };
     console.log(newTech);
-    props.addClasses(newTech);
+    props.addTech(newTech);
     setTimeout(() => {
       history.push("/dashboard");
     }, 3000);
