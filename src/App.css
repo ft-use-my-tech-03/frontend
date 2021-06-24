@@ -37,6 +37,8 @@
   }
 }
 
+/* Home Page Styles */
+
 .wrapper {
   width: auto;
   height: 100vh;
@@ -50,7 +52,6 @@
 
 .hbox {
   color: white;
-	width: 300px;
 	padding: 40px;
 	position: absolute;
 	top: 50%;
@@ -59,10 +60,31 @@
 	background: #042C71;
 	text-align: center;
 	border-radius: 24px;
+	margin-top: 5%;
+}
+
+.hbox2 {
+	display: flex;
+	flex-direction: row;
+}
+
+.hboxIntro {
+	background-color: #3498db;
+	display: flex;
+	flex-direction: column;
+	padding: 4%;
+	border-radius: 4%;
 }
 
 .hbox img {
   width: 100%;
+  border-radius: 4%;
+}
+
+.hboxOptions {
+	display: flex;
+	flex-direction: column;
+	padding: 4%;
 }
 
 /* .container {
@@ -72,6 +94,8 @@
 	justify-content: center;
 	align-items: center;
 } */
+
+/* Sign up & Login Box Styles */
 
 .sbox {
   color: white;
@@ -134,6 +158,8 @@
 	background: #3498db;
 }
 
+/* Nav Bar Styles */
+
 .nav {
 	position: fixed;
 	top: 0;
@@ -144,24 +170,27 @@
 	display: flex;
 	align-items: center;
 	padding: 0 50px;
-  background-color: #042C71;
+	background-color: #042C71;
 }
 
 .logo {
 	font-family: sans-serif;
 	font-size: 2.5rem;
-	font-weight: 600;
-	letter-spacing: 0.7rem;
+	font-weight: 400;
+	/* letter-spacing: 0.7rem; */
 	color: white;
 	margin: 4%;
 }
+
 .menu {
 	display: inline-block;
 	line-height: 80px;
 }
+
 .navmenu {
 	width: 100%;
 }
+
 .menu ul {
 	list-style: none;
 	display: flex;
@@ -169,9 +198,11 @@
 	justify-content: center;
 	align-items: center;
 }
+
 .menu ul li {
 	display: inline-block;
 }
+
 .menu ul li a {
 	text-decoration: none;
 	font-family: sans-serif;
@@ -185,6 +216,7 @@
 	margin: 0 5px;
 	transition: 0.5s ease;
 }
+
 .menu ul li a:hover {
 	color: white;
 	border: 1px solid #3498db;
