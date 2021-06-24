@@ -9,10 +9,10 @@ const Card = (item) => {
             </div>
             <div className="body">
                 <h3>{item.item.title}</h3>
-                <p>$ - {item.item.description}</p>
+                <p>{item.item.description}</p>
                 <div>
-                    <button>{item.item.timeline}</button>
-                    <button style={{marginLeft: 10}}>${item.item.fee}Rental Cost</button>
+                    <p>Available for {item.item.timeline}</p>
+                    <button style={{marginLeft: 0}}>${item.item.fee} Rental Cost</button>
                 </div>
             </div>
         </div>

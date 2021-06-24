@@ -35,7 +35,7 @@ const Products = () => {
                         Camera and Equipment Rentals
                      </h2>               
                     <div> 
-                       <h2 class="categoryLinks">Camera</h2> <h2 class="headerProducts">Lenses</h2> <h2 class="headerProducts">Drones</h2> <h2 class="headerProducts">Lights</h2> 
+                       <h2 class="categoryLinks">Camera</h2> <h2 class="categoryLinks">Lenses</h2> <h2 class="categoryLinks">Drones</h2> <h2 class="categoryLinks">Lights</h2> 
                     </div> 
                 </div>
                 <div className="list-section">
