@@ -1,0 +1,33 @@
+.products-header-section {
+    text-align: center;
+    padding: 50px 25px;
+}
+
+.home-content-section {
+    padding: 25px;
+}
+
+.card-section {
+    width: 100%;
+    margin: 10px;
+    padding: 2%;
+}
+
+
+.image-sec {
+    height: 100px;
+    width: 100px;
+    border: 1px solid;   
+}
+
+.productsHeader {
+    font-size: 1.2rem;
+}
+
+.productsHeader2 {
+    font-size: 1rem;
+}
+
+.categoryLinks {
+    font-size: 1rem;
+}
