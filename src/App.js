@@ -10,6 +10,8 @@ import SignUp from './components/SignUp';
 import TechForm from './components/TechForm';
 import PrivateRoute from './components/PrivateRoute';
 import Products from './components/Products';
+import EditTech from './components/EditTech';
+import Dashboard from './components/Dashboard';
 import './App.css'
 
 function App() {
@@ -19,6 +21,8 @@ function App() {
       <NavBar />
       {/* <Header /> */}
       <Switch>
+      <PrivateRoute path="/edittech/:id" component={EditTech} />
+      <PrivateRoute path="/dashboard" component={Dashboard} />
       <PrivateRoute path="/techform" component={TechForm} />
         <Route path="/register" component={Register}/>
         <Route path="/signup" component={SignUp} />
