@@ -16,7 +16,7 @@ function EditTech(props) {
 
   const onChange = (e) => {
     setEditTech({
-      ...editClass,
+      ...editTech,
       [e.target.name]: e.target.value,
     });
   };
@@ -34,7 +34,7 @@ function EditTech(props) {
           Type:
           <input
             type="text"
-            value={values.tech_type}
+            value={editTech.tech_type}
             onChange={onChange}
             name="tech_type"
           />
@@ -43,7 +43,7 @@ function EditTech(props) {
           Image:
           <input
             type="text"
-            value={values.tech_image}
+            value={editTech.tech_image}
             onChange={onChange}
             name="tech_image"
           />
@@ -52,7 +52,7 @@ function EditTech(props) {
           Duration:
           <input
             type="text"
-            value={values.day_duration}
+            value={editTech.day_duration}
             onChange={onChange}
             name="day_duration"
           />
@@ -61,7 +61,7 @@ function EditTech(props) {
           Start Date:
           <input
             type="text"
-            value={values.start_date}
+            value={editTech.start_date}
             onChange={onChange}
             name="start_date"
           />
