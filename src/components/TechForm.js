@@ -11,7 +11,7 @@ const initialValues = {
   start_date: "",
 };
 
-function ClassForm(props) {
+function TechForm(props) {
   const [values, setValues] = useState(initialValues);
   const history = useHistory();
 
@@ -96,7 +96,7 @@ const mapStatesToProps = (state) => {
   };
 };
 
-export default connect(mapStatesToProps, { addTech })(ClassForm);
+export default connect(mapStatesToProps, { addTech })(TechForm);
 
 const MainDiv = styled.div`
 background-image: url('https://www.odysseyis.com/wp-content/uploads/2019/05/46598089_m-2-e1558647186168.jpg');
