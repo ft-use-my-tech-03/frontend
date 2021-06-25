@@ -6,7 +6,7 @@ const axiosWithAuth = () => {
         headers: {
             Authorization: token,
         },
-        baseURL: `http://localhost:3000`
+        baseURL: `https://usemytechstuff3.herokuapp.com/api/`
     })
 }
 
