@@ -29,7 +29,8 @@ function EditTech(props) {
   };
 
   return (
-    <form onSubmit={onSubmit}>
+    <div className="sbox">
+      <form onSubmit={onSubmit}>
        <label>
           Type:
           <input
@@ -68,6 +69,8 @@ function EditTech(props) {
         </label>
         <button>Edit Equipment</button>
       </form>
+    </div>
+    
   );
 }
 

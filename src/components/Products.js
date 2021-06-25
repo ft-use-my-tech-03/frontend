@@ -23,25 +23,29 @@ const Products = () => {
     }
 
     return (        
-        <div className="sboxProducts">
-                <h1 className="productsHeader">Rent your most wanted equipment today.</h1>
-                <div className="list-section">
-                    {
-                        products.map((item) => (
-                            <Card item = {item}/>
-                        ))
-                    }
-                </div>
-                <div>
-                    <h2 classname="productsHeader2">Camera and Equipment Rental Categories</h2>               
-                    <div className="rentals"> 
-                      {
-                          products.map((item, index) => (
-                              <h2 class="rentalCat" onClick={handleCategory(item)} key={index}>{item.item_category}</h2>
-                          ))
-                      }
-                    </div> 
-                </div>
+        <div className="sboxP">
+            <h1 className="productsHeader">Rent your most wanted equipment today.</h1>
+            <div className="sboxProducts">
+                
+                    <div className="list-section">
+                        {
+                            products.map((item) => (
+                                <Card item = {item}/>
+                            ))
+                        }
+                    </div>
+                    <div>
+                        <h2 classname="productsHeader2"> Camera and Equipment Rental Categories </h2>               
+                        <div className="rentals"> 
+                        {
+                            products.map((item, index) => (
+                                <h2 class="rentalCat" onClick={handleCategory(item)} key={index}>{item.item_category}</h2>
+                            ))
+                        }
+                        </div> 
+                    </div>
+            </div>
+               
             </div>         
     )
 }

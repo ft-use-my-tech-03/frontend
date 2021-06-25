@@ -8,7 +8,8 @@ function Tech(props) {
     const {tech_image, tech_type, start_day, tech_id} = props.item;
 
     return (
-        <section>
+        <div className="sbox">
+            <section>
             { tech_image ? <img src={tech_image} /> : <img src={cameras} />}
             <h3>Type: {tech_type}</h3>
             <h3>Start Time: {start_day}</h3>
@@ -16,6 +17,8 @@ function Tech(props) {
                 More Info
             </Link>
         </section>
+        </div>
+        
     )
 }
 
