@@ -1,5 +1,4 @@
 import React from 'react'
-import "./card.css"
 import { Link } from 'react-router-dom'
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
