@@ -68,7 +68,7 @@ function Login({isLoggedIn, logIn}) {
     }
 
     return (
-        <div>
+        <div className="sboxParent">
             <div className="sbox">
                 <form onSubmit={handleLogIn}>
                     <div>

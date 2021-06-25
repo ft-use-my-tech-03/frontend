@@ -96,7 +96,8 @@ const RegisterUser = () => {
     })    
 
     return (
-        <div className="sboxRegister">
+        <div className="sboxRegisterParent">
+             <div className="sboxRegister">
          <h1>Register</h1>
             <div class="formAll">
             <form onSubmit={formik.handleSubmit}>
@@ -207,6 +208,8 @@ const RegisterUser = () => {
             </form>
             </div>
         </div>
+        </div>
+       
     )
 }
 

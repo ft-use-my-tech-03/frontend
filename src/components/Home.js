@@ -2,7 +2,7 @@ import React from 'react'
 
 const Home = () => {
     return (
-        <div className="hbox">
+        <div className="hboxParent">
             <div className="hbox2">
                 <div className="hboxIntro">
                     <h1>

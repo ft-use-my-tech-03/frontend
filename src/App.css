@@ -38,15 +38,17 @@
   }
 }
 
-
+.wrapper {
+	width: 100%;
+	background-image: url('https://www.odysseyis.com/wp-content/uploads/2019/05/46598089_m-2-e1558647186168.jpg');
+	background-position: center;
+	background-repeat: repeat;
+	backdrop-filter: opacity(80%);
+}
 
 /* Nav Bar Styles */
 
 .nav {
-	position: sticky;
-	top: 0;
-	left: 0;
-	width: 100%;
 	height: 110px;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.521);
 	display: flex;
@@ -110,32 +112,19 @@
 
 /* Home Page Styles */
 
-.wrapper {
-	width: auto;
-	height: 100vh;
-	background-image: url('https://www.odysseyis.com/wp-content/uploads/2019/05/46598089_m-2-e1558647186168.jpg');
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	backdrop-filter: opacity(80%);
-	display: block;
-  }
-
-.hbox {
-	color: white;
-	padding: 40px;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	background: #042C71;
-	text-align: center;
-	border-radius: 24px;
+.hboxParent{
+	display: flex;
+	justify-content: center;
+	margin-top: 30px;
 }
 
 .hbox2 {
-	display: flex;
-	flex-direction: row;
+	color: white;
+	padding: 40px;
+	background: #042C71;
+	text-align: center;
+	border-radius: 24px;
+	width: 40%;
 }
 
 .hboxIntro {
@@ -170,13 +159,11 @@
 .sbox{
 	color: white;
 	padding: 40px;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	margin-top: 30px;
 	background: #042C71;
 	text-align: center;
 	border-radius: 24px;
+	width: 30%;
 }
 
 .sbox h1 {
@@ -198,9 +185,9 @@
 	background: none;
 	border-radius: 24px;
 	transition: 0.25s;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  	flex-direction: column;
+  	align-items: center;
+	justify-content: center;
 }
 
 .sbox input:focus {
@@ -231,13 +218,16 @@
 
 /* Register Box Styles */
 
+.sboxRegisterParent{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .sboxRegister {
 	color: white;
 	padding: 40px;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	margin-top: 30px;
 	background: #042C71;
 	text-align: center;
 	border-radius: 24px;
@@ -264,9 +254,9 @@
 	background: none;
 	border-radius: 24px;
 	transition: 0.25s;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  	flex-direction: column;
+  	align-items: center;
+  	justify-content: center;
 }
 
 .sboxRegister select  {
@@ -282,9 +272,9 @@
 	background: #042C71;
 	border-radius: 24px;
 	transition: 0.25s;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  	flex-direction: column;
+  	align-items: center;
+  	justify-content: center;
 }
 .sboxRegister input:focus {
 	width: 220px;
@@ -313,13 +303,15 @@
 
 /* Products Section */
 
+.sboxParent{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .sboxP {
 	color: white;
 	padding: 10px;
-	position: relative;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -70%);
 	margin-top: 30px;
 	background: #042C71;
 	text-align: center;
@@ -328,6 +320,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: center;
 }
 
 .sboxProducts{
