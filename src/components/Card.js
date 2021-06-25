@@ -5,7 +5,7 @@ const Card = (item) => {
     return (
         <div className="card-section">
             <div className="image-sec">
-                <img src={item.item.image_url} alt="..." style={{width: "200px"}}/>
+                <img src={item.item.image_url} alt="..." style={{width: "200px", height: "200px"}}/>
             </div>
             <div className="body">
                 <h3>{item.item.item_name}</h3>

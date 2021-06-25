@@ -96,8 +96,8 @@ const RegisterUser = () => {
     })    
 
     return (
-        <div className="register_section">
-         <h1 class="registerAll">Register</h1>&nbsp;
+        <div className="sboxRegister">
+         <h1>Register</h1>
             <div class="formAll">
             <form onSubmit={formik.handleSubmit}>
                 <label htmlFor="firstName">First Name:</label><br></br>
@@ -144,7 +144,7 @@ const RegisterUser = () => {
                     value={formik.values.address}
                 /><br></br>
 
-                <label htmlFor="city">City</label><br></br>
+                <label htmlFor="city">City:</label><br></br>
                 <input 
                     id="city"
                     name="city"
@@ -154,7 +154,7 @@ const RegisterUser = () => {
                     value={formik.values.city}
                 /><br></br>
 
-                <label htmlFor="state">State</label><br></br>
+                <label htmlFor="state">State:</label><br></br>
                 <input 
                     id="state"
                     name="state"
@@ -164,7 +164,7 @@ const RegisterUser = () => {
                     value={formik.values.state}
                 /><br></br>
 
-                <label htmlFor="zipcode">ZipCode</label><br></br>
+                <label htmlFor="zipcode">ZipCode:</label><br></br>
                 <input
                     id="zipcode"
                     name="zipcode"
@@ -195,7 +195,7 @@ const RegisterUser = () => {
                     value={formik.values.confirmPassword}
                 /><br></br>
 
-                <label htmlFor="userType">User Type</label><br></br>
+                <label htmlFor="userType">User Type:</label><br></br>
                 <select value={formik.values.userType} onChange={formik.handleChange} name="userType">
                     <option value="">Select your Role</option>
                     <option value="owner">Owner</option>

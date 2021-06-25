@@ -11,8 +11,14 @@
     width: 200px;
     margin: 10px;
     padding: 2%;
+    display: inline-block;
 }
 
+.rentals {
+    display: flex;
+    padding-right: 20px;
+    margin-right: 20px;
+}
 
 .image-sec {
     height: auto;

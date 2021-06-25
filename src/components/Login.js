@@ -55,7 +55,7 @@ function Login({isLoggedIn, logIn}) {
 
     const handleLogIn = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:3000/login', form)
+        axios.post('https://usemytechstuff3.herokuapp.com/api/auth/login', form)
         .then(res => {
             console.log(res.data)
             localStorage.setItem('token', res.data.token);
@@ -88,7 +88,7 @@ function Login({isLoggedIn, logIn}) {
                         <input value={form.password}
                             onChange={onChange}
                             name="password"
-                            type="text" />
+                            type="password" />
                     </div>
                     <button disabled={disabled}>Login</button>
                 </form>
