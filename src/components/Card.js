@@ -7,7 +7,7 @@ const Card = (item) => {
         <div classname="cbox">
             <div className="card-section">
             <div className="image-sec">
-register
+
              <Link to={`/details/${item.item.item_id}`}>
                 <img src={item.item.image_url} alt="..." style={{width: "200px", height: "200px"}}/>
                 </Link>
@@ -25,12 +25,12 @@ register
                         {item.item.item_name}
                     </h4> 
                 </Link>
- main
+
                 <p>{item.item.item_category}</p>
                 <p>{item.item.item_description}</p>
                 <div>
                     <p class="quant">Quantity Available {item.item.item_quantity}</p>
-                    <button style={{marginLeft: 0}}>${item.item.price} Rental Cost</button>
+                    <Link to={`/details/${item.item.item_id}`}> <button style={{marginLeft: 0}}>${item.item.price} Rental Cost</button></Link>
                 </div>
             </div>
  
