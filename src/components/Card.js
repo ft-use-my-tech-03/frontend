@@ -1,12 +1,20 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+  import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 const Card = (item) => {
     return (
         <div classname="cbox">
             <div className="card-section">
             <div className="image-sec">
+register
+             <Link to={`/details/${item.item.item_id}`}>
+                <img src={item.item.image_url} alt="..." style={{width: "200px", height: "200px"}}/>
+                </Link>
+            </div>
+            <div className="body">
+            <Link to={`/details/${item.item.item_id}`}> <h3 style={{color: "white"}}>{item.item.item_name}</h3> </Link>
+
                 <Link to={`/products/${item.item.id}`}>
                     <img src={item.item.image_url} alt="..." style={{width: "200px", height: "200px"}}/>
                 </Link>
@@ -17,6 +25,7 @@ const Card = (item) => {
                         {item.item.item_name}
                     </h4> 
                 </Link>
+ main
                 <p>{item.item.item_category}</p>
                 <p>{item.item.item_description}</p>
                 <div>
