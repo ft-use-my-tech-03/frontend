@@ -12,7 +12,7 @@ function Dashboard(props) {
   }, []);
 
   return (
-    <div>
+    <div className="sbox">
       <h2>Available Rentals</h2>
       { props.currentUser.auth_code && <Link to="/techform">Add Equipment</Link>}
       <div>
