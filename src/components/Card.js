@@ -12,7 +12,7 @@ const Card = (item) => {
                 <p>{item.item.item_category}</p>
                 <p>{item.item.item_description}</p>
                 <div>
-                    <p>Quantity Available {item.item.item_quantity}</p>
+                    <p class="quant">Quantity Available {item.item.item_quantity}</p>
                     <button style={{marginLeft: 0}}>${item.item.price} Rental Cost</button>
                 </div>
             </div>
