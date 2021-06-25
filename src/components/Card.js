@@ -15,9 +15,6 @@ const Card = (item) => {
             <div className="body">
             <Link to={`/details/${item.item.item_id}`}> <h3 style={{color: "white"}}>{item.item.item_name}</h3> </Link>
 
-                <Link to={`/products/${item.item.id}`}>
-                    <img src={item.item.image_url} alt="..." style={{width: "200px", height: "200px"}}/>
-                </Link>
             </div>
             <div className="cboxbody">
                 <Link to={`/products/${item.item.id}`}> 
