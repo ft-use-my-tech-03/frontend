@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
 }
@@ -41,7 +42,7 @@
 
 .wrapper {
   width: auto;
-  height: 100vh;
+  height: 1400px;
   background-image: url('https://www.odysseyis.com/wp-content/uploads/2019/05/46598089_m-2-e1558647186168.jpg');
   background-position: center;
   background-size: cover;
@@ -97,7 +98,19 @@
 
 /* Sign up & Login Box Styles */
 
-.sbox {
+.sboxRegister {
+	color: white;
+	width: 300px;
+	padding: 40px;
+	position: absolute;
+	top: 110%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #042C71;
+	text-align: center;
+	border-radius: 24px;	
+}
+.sbox{
   color: white;
 	width: 300px;
 	padding: 40px;
@@ -109,6 +122,56 @@
 	text-align: center;
 	border-radius: 24px;
 }
+
+.sboxRegister h1 {
+	color: white;
+	font-weight: 700;
+	margin-bottom: 20px;
+}
+
+.sboxRegister input {
+	border: 0;
+	color: white;
+	display: flex;
+	margin: 10px auto;
+	text-align: center;
+	border: 2px solid white;
+	padding: 14px 10px;
+	width: 200px;
+	outline: none;
+	background: none;
+	border-radius: 24px;
+	transition: 0.25s;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sboxRegister input:focus {
+	width: 220px;
+	border-color: #3498db;
+}
+
+.sboxRegister button {
+	border: 0;
+	background: none;
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+	border: 2px solid #3498db;
+	padding: 14px 40px;
+	outline: none;
+	color: white;
+	border-radius: 24px;
+	transition: 0.25s;
+	cursor: pointer;
+	font-size: 1.2rem;
+}
+
+.sboxRegister button:hover {
+	background: #3498db;
+}
+
 .sbox h1 {
 	color: white;
 	font-weight: 700;
@@ -169,13 +232,13 @@
 	border-bottom: 1px solid rgba(255, 255, 255, 0.521);
 	display: flex;
 	align-items: center;
-	padding: 0 50px;
+	/* padding: 0 50px; */
 	background-color: #042C71;
 }
 
 .logo {
 	font-family: sans-serif;
-	font-size: 2.5rem;
+	font-size: 1.2rem;
 	font-weight: 400;
 	/* letter-spacing: 0.7rem; */
 	color: white;
@@ -206,8 +269,8 @@
 .menu ul li a {
 	text-decoration: none;
 	font-family: sans-serif;
-	font-size: 1.2rem;
-	font-weight: 600;
+	font-size: .8rem;
+	font-weight: 400;
 	height: 20px;
 	color: white;
 	border: 1px solid transparent;
@@ -221,3 +284,23 @@
 	color: white;
 	border: 1px solid #3498db;
 }
+
+/* Products Section */
+.sboxProducts {
+	color: white;
+	width: 800px;
+	padding: 40px;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #042C71;
+	text-align: center;
+	border-radius: 24px;
+	font-size: .8rem;
+}
+
+.list-section {
+	/* display: flex; */
+}
+

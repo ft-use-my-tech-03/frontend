@@ -23,7 +23,7 @@ function App() {
       <Switch>
       <PrivateRoute path="/edittech/:id" component={EditTech} />
       <PrivateRoute path="/dashboard" component={Dashboard} />
-      <PrivateRoute path="/techform" component={TechForm} />
+      <Route path="/techform" component={TechForm} />
         <Route path="/register" component={Register}/>
         <Route path="/signup" component={SignUp} />
         <Route path="/details/:id" component={Details} />

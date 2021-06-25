@@ -23,7 +23,7 @@ const Products = () => {
     }
 
     return (        
-        <div className="products-section">
+        <div className="sboxProducts">
                 <h1 className="productsHeader">Rent your most wanted equipment today.</h1>
                 <div>
                     <h2 classname="productsHeader2">Camera and Equipment Rental Categories</h2>               

@@ -17,7 +17,7 @@ function NavBar({isLoggedIn, logOut}) {
         <div className="wrapper">
             <div className="container">
             <div className="nav">
-            <div className="logo">LensRentals</div>
+            <div className="logo">Lens Rentals</div>
             <div className="menu">
                 <ul className="navMenu">
                     <nav>
@@ -25,6 +25,13 @@ function NavBar({isLoggedIn, logOut}) {
                             <li>
                                 <a href="#0">
                                     Home
+                                </a>
+                            </li>
+                        </Link>
+                        <Link to="/products">
+                            <li>
+                                <a href="/products">
+                                    Products
                                 </a>
                             </li>
                         </Link>
@@ -61,6 +68,13 @@ function NavBar({isLoggedIn, logOut}) {
                             </li>
                             
                         </Link>}
+                        <Link to="/register">
+                            <li>
+                                <a href="/register">
+                                    Register
+                                </a>
+                            </li>
+                        </Link>
                     </nav>
                 </ul>
             </div>
