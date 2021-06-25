@@ -43,7 +43,7 @@
 /* Nav Bar Styles */
 
 .nav {
-	position: fixed;
+	position: sticky;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -365,21 +365,68 @@
 	text-transform: capitalize;
 }
 
+.card-section {
+    width: 220px;
+    margin: 10px;
+    padding: 2%;
+    display: inline-block;
+}
 
+.image-sec img{
+	border-radius: 20px;
+}
 
+.productsHeader2 {
+    font-size: 1.8rem;
+}
 
 @media screen and (max-width: 800px) { 
-.sboxProducts {
-	color: white;
-	width: 620px;
-	padding: 40px;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	background: #042C71;
-	border-radius: 24px;
-	font-size: 1.4rem;
-}
+	.sboxP{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	.sboxProducts {
+		color: white;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-color: none;
+		border-radius: 24px;
+		width: 100%;
+		padding: 10%;
+	}
+	.list-section{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	.cbox{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	.card-section {
+        color: white;
+        background: #042C71;
+        border-radius: 24px;
+        font-size: 1.4rem;
+		padding: 10%;
+    }
+	.menu ul {
+		list-style: none;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+	}
+	.nav{
+		height: 100%;
+	}
+	
 }
 
