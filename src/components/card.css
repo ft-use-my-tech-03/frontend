@@ -8,11 +8,21 @@
 }
 
 .card-section {
-    width: 175px;
+    width: 220px;
     margin: 10px;
     padding: 2%;
     display: inline-block;
 }
+
+@media screen and (max-width: 800px) { 
+    .card-section {
+        color: white;
+        transform: translate(-50%, -50%);
+        background: #042C71;
+        border-radius: 24px;
+        font-size: 1.4rem;
+    }
+    }
 
 .image-sec {
     height: 200px;
