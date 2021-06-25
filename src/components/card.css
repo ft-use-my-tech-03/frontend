@@ -8,32 +8,30 @@
 }
 
 .card-section {
-    width: 200px;
+    width: 175px;
     margin: 10px;
     padding: 2%;
     display: inline-block;
 }
 
-.rentals {
-    display: flex;
-    padding-right: 20px;
-    margin-right: 20px;
-}
-
 .image-sec {
-    height: auto;
+    height: 200px;
     width: 200px;
     border: 1px solid;   
 }
 
 .productsHeader {
-    font-size: 1.2rem;
+    font-size: 2.0rem;
 }
 
 .productsHeader2 {
-    font-size: 1rem;
+    font-size: 1.8rem;
 }
 
 .categoryLinks {
-    font-size: 1rem;
+    font-size: 1.6rem;
+}
+
+p {
+    font-size: 1.2rem;
 }
