@@ -22,7 +22,8 @@ const Products = () => {
     }
 
     return (        
-        <div className="sboxP">
+        <div className="sboxParent">
+            <div className="sboxP">
             <h1 className="productsHeader">Rent your most wanted equipment today.</h1>
             <div className="sboxProducts">
                 
@@ -45,7 +46,9 @@ const Products = () => {
                     </div>
             </div>
                
-            </div>         
+            </div>  
+        </div>
+               
     )
 }
 

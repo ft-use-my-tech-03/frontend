@@ -14,8 +14,8 @@ function NavBar({isLoggedIn, logOut}) {
     }
     
     return (
-        <div className="wrapper">
-            <div className="container">
+        
+        <div className="container">
             <div className="nav">
             <div className="logo">Lens Rentals</div>
             <div className="menu">
@@ -79,8 +79,6 @@ function NavBar({isLoggedIn, logOut}) {
                 </ul>
             </div>
         </div>
-        </div>
-        
         </div>
         
     )

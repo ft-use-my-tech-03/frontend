@@ -16,7 +16,7 @@ import './App.css'
 
 function App() {
   return (
-    <div>
+    <div className="wrapper">
       <Router>
       <NavBar />
       {/* <Header /> */}

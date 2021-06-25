@@ -51,7 +51,7 @@ function SignUp({addUser}) {
     }
 
     return (
-        <div>
+        <div className="sboxParent">
             <div className="sbox">
                 <h1>Create an account</h1>
                 <div className="errors">
