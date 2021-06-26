@@ -9,8 +9,8 @@ const validate = values => {
     // First Name
     if(!values.firstName || values.firstName.length < 2) {
         errors.firstName = 'Must be 2 characters or more';
-    } else if(values.firstName.length > 15 ) {
-        errors.firstName = 'Must be 15 characters or less';
+    } else if(values.firstName.length > 128 ) {
+        errors.firstName = 'Must be 128 characters or less';
     } else if (/[@.$:\/]/i.test(values.firstName)) {
         errors.firstName = 'First Name cannot contain special characters'
     }
@@ -18,8 +18,8 @@ const validate = values => {
     // Last name
     if(!values.lastName || values.lastName.length < 2) {
         errors.lastName = 'Must be 2 characters or more';
-    } else if(values.lastName.length > 15) {
-        errors.lastName = 'Must be 15 Characters or less'
+    } else if(values.lastName.length > 128) {
+        errors.lastName = 'Must be 128 Characters or less'
     } else if (/[@.$:\/]/i.test(values.lastName)) {
         errors.lastName = 'Last Name cannot contain special characters'
     }
@@ -34,6 +34,14 @@ const validate = values => {
     // City Validation
     // State Validation
     // ZipCode Validation
+    // Phone Validation
+    if(!values.phoneNumber || values.phoneNumber.length < 2) {
+        errors.phoneNumber = 'Must be 2 characters or more';
+    } else if(values.phoneNumber.length > 128) {
+        errors.phoneNumber = 'Must be 128 Characters or less'
+    } else if (/[@.$:\/]/i.test(values.lastName)) {
+        errors.phoneNumber = 'Phone Number cannot contain special characters'
+    }
 
     // Password Validation
     if(!values.password) {
@@ -70,7 +78,8 @@ const RegisterUser = () => {
             address: '',
             city: '',
             state: '',
-            zipcode: ''
+            zipcode: '',
+            phoneNumber: ''
         },
         
         validate,
@@ -85,6 +94,7 @@ const RegisterUser = () => {
                 user_firstname: values.firstName,
                 user_lastname: values.lastName,
                 owner: owner,
+                user_phonenumber: values.phoneNumber,
                 user_address: values.address,
                 user_city: values.city,
                 user_state: values.state,
@@ -101,6 +111,7 @@ const RegisterUser = () => {
          <h1>Register</h1>
             <div class="formAll">
             <form onSubmit={formik.handleSubmit}>
+
                 <label htmlFor="firstName">First Name:</label><br></br>
                 <input 
                     id="firstName"
@@ -174,6 +185,17 @@ const RegisterUser = () => {
                     onChange={formik.handleChange}
                     value={formik.values.zipcode}
                 /><br></br>
+
+                <label htmlFor="phoneNumber">Phone Number:</label><br></br>
+                <input 
+                    id="phoneNumber"
+                    name="phoneNumber"
+                    type="text"
+                    placeholder="Phone Number"
+                    onChange={formik.handleChange}
+                    value={formik.values.phoneNumber}
+                /><br></br>
+                {formik.errors.phoneNumber ? <div style={{color: 'red'}}>{formik.errors.phoneNumber}</div> : null}
 
                 <label htmlFor="password">Password:</label><br></br>
                 <input 

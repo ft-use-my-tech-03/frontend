@@ -9,24 +9,19 @@ const Card = (item) => {
             <div className="image-sec">
 
              <Link to={`/details/${item.item.item_id}`}>
-                <img src={item.item.image_url} alt="..." style={{width: "200px", height: "200px"}}/>
+                <img src={item.item.image_url} alt="..." style={{width: "200px", height: "200px"}}/><br></br>
                 </Link>
             </div>
             <div className="body">
-            <Link to={`/details/${item.item.item_id}`}> <h3 style={{color: "white"}}>{item.item.item_name}</h3> </Link>
+            <Link to={`/details/${item.item.item_id}`}> <h3 style={{color: "white"}}>{item.item.item_name}</h3> </Link><br></br>
 
             </div>
             <div className="cboxbody">
-                <Link to={`/products/${item.item.id}`}> 
-                    <h4 style={{color: "white"}}>
-                        {item.item.item_name}
-                    </h4> 
-                </Link>
-
-                <p>{item.item.item_category}</p>
-                <p>{item.item.item_description}</p>
+               
+                <p>Category: {item.item.item_category}</p><br></br>
+                <p>{item.item.item_description}</p><br></br>
                 <div>
-                    <p class="quant">Quantity Available {item.item.item_quantity}</p>
+                    <p class="quant">Quantity Available: {item.item.item_quantity}</p><br></br>
                     <Link to={`/details/${item.item.item_id}`}> <button style={{marginLeft: 0}}>${item.item.price} Rental Cost</button></Link>
                 </div>
             </div>

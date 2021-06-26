@@ -22,15 +22,15 @@ const [item, setItem] = useState({})
 
 //class name is placeholder for future styling 
     return(
-    <div className = 'sbox'>   
-        <img src = {item.image_url} ></img>
-        <div> Item: {item.item_name} </div> 
-        <div> Category: {item.item_category} </div>
-        <div> Price: ${item.price} </div>
-        <div> Term: {item.rentalTerm} </div>
-        <div> Availability: {item.available ? 'Available': 'Out of Stock'} </div>
-        <div> Quantity: {item.item_quantity} </div>
-        <div> Description: {item.item_description} </div>
+    <div className = 'dbox'> 
+        <img class="detailImg" src = {item.image_url} ></img><br></br><br></br>
+        <div> Item: {item.item_name} </div> <br></br>
+        <div> Category: {item.item_category} </div><br></br>
+        <div> Price: ${item.price} </div><br></br>
+        <div> Term: {item.rentalTerm} </div><br></br>
+        <div> Availability: {item.available ? 'Available': 'Out of Stock'} </div><br></br>
+        <div> Quantity: {item.item_quantity} </div><br></br>
+        <div> Description: {item.item_description} </div><br></br>
         
     </div>
     )
