@@ -421,3 +421,72 @@
 	
 }
 
+
+
+/* Details Page */
+
+.detailImg {
+	max-width: 480px;
+	height: auto;
+}
+
+.dbox {
+	color: white;
+	padding: 40px;
+	margin-top: 30px;
+	background: #042C71;
+	text-align: center;
+	border-radius: 24px;
+	width: 30%;
+	margin: 0 auto;
+}
+
+
+.dbox h1 {
+	color: white;
+	font-weight: 700;
+	margin-bottom: 20px;
+}
+
+.dbox input {
+	border: 0;
+	color: white;
+	display: flex;
+	margin: 10px auto;
+	text-align: center;
+	border: 2px solid white;
+	padding: 14px 10px;
+	width: 200px;
+	outline: none;
+	background: none;
+	border-radius: 24px;
+	transition: 0.25s;
+  	flex-direction: column;
+  	align-items: center;
+	justify-content: center;
+}
+
+.dbox input:focus {
+	width: 220px;
+	border-color: #3498db;
+}
+
+.dbox button {
+	border: 0;
+	background: none;
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+	border: 2px solid #3498db;
+	padding: 14px 40px;
+	outline: none;
+	color: white;
+	border-radius: 24px;
+	transition: 0.25s;
+	cursor: pointer;
+	font-size: 1.2rem;
+}
+
+.sbox button:hover {
+	background: #3498db;
+}
