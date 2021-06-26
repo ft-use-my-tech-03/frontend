@@ -35,7 +35,9 @@ const validate = values => {
     // State Validation
     // ZipCode Validation
     // Phone Validation
-    if(!values.phoneNumber || values.phoneNumber.length < 2) {
+    if(!values.phoneNumber) {
+        errors.phoneNumber = 'Required';
+    } else if(values.phoneNumber.length < 2) {
         errors.phoneNumber = 'Must be 2 characters or more';
     } else if(values.phoneNumber.length > 128) {
         errors.phoneNumber = 'Must be 128 Characters or less'

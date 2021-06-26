@@ -35,11 +35,13 @@ export const addUser = (newUser) => (dispatch) => {
 }
 
 export const logIn = (newUser) => (dispatch) => {
+  console.log("new user", newUser)
   axios
     .post('https://usemytechstuff3.herokuapp.com/api/products/login', newUser)
     .then(res => {
-      dispatch({type: LOG_IN_SUCCESS, payload: res.data.data})
-      window.localStorage.setItem('token', res.data.token)
+      console.log("response", res)
+      window.localStorage.setItem('token', res.data.token)      
+      return dispatch({type: LOG_IN_SUCCESS, payload: res.data})      
     })
     .catch(err => {
       console.log({err})

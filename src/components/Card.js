@@ -18,8 +18,8 @@ const Card = (item) => {
             </div>
             <div className="cboxbody">
                
-                <p>Category: {item.item.item_category}</p><br></br>
-                <p>{item.item.item_description}</p><br></br>
+                <p>Category: {item.item.item_category}</p>
+                <p>{item.item.item_description}</p>
                 <div>
                     <p class="quant">Quantity Available: {item.item.item_quantity}</p><br></br>
                     <Link to={`/details/${item.item.item_id}`}> <button style={{marginLeft: 0}}>${item.item.price} Rental Cost</button></Link>

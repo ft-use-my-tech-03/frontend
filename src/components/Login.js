@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import { useHistory } from 'react-router-dom';
-import { connect } from 'react-redux';
+import { connect, useDispatch } from 'react-redux';
 import { logIn } from '../store';
 import schema from '../validation/formSchema';
 import * as yup from 'yup';
-import axios from 'axios'
+// import axios from 'axios'
 
+function Login({isLoggedIn}) {
 
-function Login({isLoggedIn, logIn}) {
+    const dispatch = useDispatch()
 
     const formState = {
         username: '',
@@ -45,7 +46,9 @@ function Login({isLoggedIn, logIn}) {
 
     useEffect(() => {
         schema.isValid(form)
-            .then(valid => setDisabled(!valid))
+            .then(valid => {
+                setDisabled(!valid)           
+        })
     }, [form])
 
     const onChange = (event) => {
@@ -54,17 +57,18 @@ function Login({isLoggedIn, logIn}) {
     }
 
     const handleLogIn = (e) => {
-        e.preventDefault();
-        axios.post('https://usemytechstuff3.herokuapp.com/api/auth/login', form)
-        .then(res => {
-            console.log(res.data)
-            localStorage.setItem('token', res.data.token);
-            logIn(res.data.data.user_id);
-            push('/');
-        })
-        .catch(err => {
-            console.log(err);
-        })
+        e.preventDefault();        
+        dispatch(logIn(form))
+        // axios.post('https://usemytechstuff3.herokuapp.com/api/auth/login', form)
+        // .then(res => {
+        //     console.log(res.data)
+        //     localStorage.setItem('token', res.data.token);
+        //     logIn(res.data.data.user_id);
+        //     push('/');
+        // })
+        // .catch(err => {
+        //     console.log(err);
+        // })
     }
 
     return (
@@ -75,7 +79,7 @@ function Login({isLoggedIn, logIn}) {
                         <div className="errors">
                             <div>{formError.username}</div>
                             <div>{formError.password}</div>
-                            <div>{formError.phoneNumber}</div>
+                            {/* <div>{formError.phoneNumber}</div> */}
                         </div>
                         <div>Username</div>
                         <input value={form.username}
@@ -103,4 +107,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps, {logIn})(Login)
+export default connect(mapStateToProps, {})(Login)
