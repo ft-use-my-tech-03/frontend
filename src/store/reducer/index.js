@@ -40,6 +40,7 @@ import {
         };
   
       case LOG_IN_SUCCESS:
+        console.log("here", action)
         return {
           ...state,
           isLoggedIn: true, 

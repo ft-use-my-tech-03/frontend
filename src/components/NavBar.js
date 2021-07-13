@@ -21,60 +21,60 @@ function NavBar({isLoggedIn, logOut}) {
             <div className="menu">
                 <ul className="navMenu">
                     <nav>
-                        <Link to="/">
+                        
                             <li>
-                                <a href="#0">
-                                    Home
-                                </a>
+                                <Link to="/">                                
+                                    Home                                
+                                </Link>
                             </li>
-                        </Link>
-                        <Link to="/products">
+                        
+                        
                             <li>
-                                <a href="/products">
+                            <Link to="/products">
                                     Products
-                                </a>
+                                    </Link>
                             </li>
-                        </Link>
+                        
                         { !isLoggedIn && 
-                        <Link to="/login">
+                        
                             <li>
-                                <a href="#0">
+                                <Link to="/login">
                                     Login
-                                </a>
+                                    </Link>
                             </li>
-                        </Link>}
+                        }
                         {isLoggedIn ? 
-                        <Link onClick={handleLogOut}>
+                        
                             <li>
-                                <a href="#0">
+                                <Link to="" onClick={handleLogOut}>
                                     Log Out
-                                </a>
+                                    </Link>
                             </li>
-                        </Link>
+                        
                             :
-                        <Link to="/signup">
+                        
                             <li>
-                                <a href="#0">
+                                <Link to="/signup">
                                     Sign Up
-                                </a>
+                                    </Link>
                             </li>
-                        </Link>}
+                        }
                         { isLoggedIn && 
-                        <Link to="/dashboard">
+                        
                             <li>
-                                <a href="#0">
+                                <Link to="/dashboard">
                                     Dashboard
-                                </a>
+                                    </Link>
                             </li>
                             
-                        </Link>}
-                        <Link to="/register">
+                        }
+                        
                             <li>
-                                <a href="/register">
+                            <Link to="/register">
                                     Register
-                                </a>
+                                    </Link>
                             </li>
-                        </Link>
+                        
                     </nav>
                 </ul>
             </div>

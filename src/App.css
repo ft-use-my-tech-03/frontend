@@ -430,6 +430,20 @@
 	height: auto;
 }
 
+@media screen and (max-width: 900px) {
+	.detailImg {
+		width: 180px;
+		height: auto;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.detailImg {
+		width: 160px;
+		height: auto;
+	}
+}
+
 .dbox {
 	color: white;
 	padding: 40px;
@@ -487,6 +501,6 @@
 	font-size: 1.2rem;
 }
 
-.sbox button:hover {
+.dbox button:hover {
 	background: #3498db;
 }

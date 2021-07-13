@@ -12,15 +12,15 @@ const  formSchema = yup.object().shape({
  .min(6,'Please enter a password')
  .required('Password required'),
  
- email: yup
- .string()
- .min('Please enter an email')
- .required('Password required'),
+//  email: yup
+//  .string()
+//  .min('Please enter an email')
+//  .required('Password required'),
 
- phoneNumber: yup
- .string()
- .min('Please enter an email')
- .required('Password required'),
+//  phoneNumber: yup
+//  .string()
+//  .min('Please enter an email')
+//  .required('Password required'),
 
 })
 export default formSchema
